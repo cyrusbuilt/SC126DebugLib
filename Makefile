@@ -1,5 +1,5 @@
 CC := zcc
-CFLAGS := +cpm -lm -create-app
+CFLAGS := +cpm --list -m -create-app -v
 SOURCES := dbgtest.c sc126debug.c
 
 all: dbgtest.com

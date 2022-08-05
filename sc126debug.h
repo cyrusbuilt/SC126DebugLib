@@ -19,15 +19,11 @@
  * @param value An bit value (0 - 255).
  * @returns true if a valid 8 bit value was written; Otherwise, false.
  */
-extern bool __LIB__ SC126Debug_write(int value) __smallc;
-extern bool __LIB__ SC126Debug_write_callee(int value) __smallc __z88dk_callee;
-#define SC126Debug_write(a) SC126Debug_write_callee(a)
+extern bool __LIB__ SC126Debug_write(int value) __z88dk_fastcall;
 
 /**
  * Clears the debug port (writes 0 to debug port switching all LEDs off).
  */
-extern void __LIB__ SC126Debug_clear() __smallc;
-extern void __LIB__ SC126Debug_clear_callee() __smallc __z88dk_callee;
-#define SC126Debug_clear() SC126Debug_clear_callee()
+extern void __LIB__ SC126Debug_clear() __z88dk_fastcall;
 
 #endif
